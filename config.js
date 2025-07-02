@@ -13,5 +13,5 @@ export const STREAMERS = [
   "xflaise","wolkiiq","castcrafter","riirex","kuchentv","michilurk",
   "tim_latka","bossioyt","sascha","jayzumjiggy","angeschrien","tunkiefunky",
   "onscreen","horican","simply","tolkin","rakete","coinsmaffia",
-  "gamerbrother","abugoku","katoo","xflixx","xsl1der","rumathra"
+  "gamerbrother","abugoku","katoo","xflixx","xsl1der","rumathra", "GetOnMyLvLTV"
 ];
