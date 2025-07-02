@@ -1,6 +1,7 @@
 // Deine Twitch-App-Daten hier eintragen
 export const CLIENT_ID     = '3y44wjdjsaa7y2lqr7db3wjvogdgrt';
 export const CLIENT_SECRET = 'fb39qhcpkgrlkmah9innxmqwrvj94w';
+export const PARENT_DOMAIN = 'timactics.github.io/twitch_viewer';
 // Feste Liste deutscher Streamer (user_login)
 export const STREAMERS = [
   "montanablack88","trymacs","papaplatte","therealknossi","eliasn97",
