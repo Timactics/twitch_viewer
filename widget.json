@@ -1,0 +1,9 @@
+{
+  "id": "com.dein.twitchgallery",
+  "version": "1.0.0",
+  "type": "webapp",
+  "title": "Twitch Galerie",
+  "main": "index.html",
+  "icon": "icons/icon-192.png",
+  "permissions": []
+}

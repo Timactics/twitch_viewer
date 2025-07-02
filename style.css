@@ -1,0 +1,168 @@
+/* Grundlegendes Reset & Theme */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #0e0e10;
+  color: #fff;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+.hidden {
+  display: none !important;
+}
+
+/* ———————————— Hinzufügen-Leiste ———————————— */
+#add-container {
+  position: absolute;
+  top: 10px; left: 10px; right: 10px;
+  display: flex; gap: 0.5rem; z-index: 20;
+}
+#add-input {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+}
+#add-button {
+  padding: 0.5rem 1rem;
+  background: #9147ff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* ———————————— Galerie ———————————— */
+#gallery {
+  position: absolute;
+  top: 50px;    /* unter der add-bar */
+  left: 0; right: 0; bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);  /* genau 6 Spalten */
+  gap: 1rem;
+  padding: 1rem;
+  overflow-y: auto;
+  align-content: start;
+}
+
+/* ———————————— Karten (Cards) ———————————— */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #1f1f23;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: scale(1.03);
+}
+
+/* Vorschaubild: im 16:9-Verhältnis */
+.card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* Info-Bereich: Name, Zuschauer, Titel */
+.card .info {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.card .info .username {
+  font-weight: bold;
+  font-size: 1rem;
+}
+.card .info .viewers {
+  font-size: 0.9rem;
+}
+.card .info .title {
+  font-size: 0.85rem;
+  color: #aaa;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* —————————— Entfernen-Button —————————— */
+.remove-btn {
+  position: absolute;
+  top: 8px; right: 8px;
+  background: rgba(220,20,60,0.9);
+  border: none;
+  color: #fff;
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  font-size: 1.2rem; line-height: 1;
+  cursor: pointer;
+  z-index: 2;
+}
+.remove-btn:hover {
+  background: rgba(220,20,60,1);
+}
+.remove-btn:focus {
+  outline: 2px solid #fff;
+}
+
+/* ———————————— Viewer (Stream + Chat) ———————————— */
+#viewer {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: none;
+  flex-direction: column;
+  background: #000;
+}
+#viewer:not(.hidden) {
+  display: flex;
+}
+
+/* ———————————— Controls ———————————— */
+#controls {
+  position: absolute;
+  top: 10px; left: 10px; right: 10px;
+  display: flex; justify-content: space-between;
+  z-index: 10;
+}
+.btn {
+  background: rgba(0,0,0,0.6);
+  border: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* ———————————— Stream & Chat ———————————— */
+#stream-container {
+  display: flex;
+  flex: 1;
+  margin-top: 50px;  /* Platz für Controls */
+}
+#stream-wrapper {
+  flex: 3;
+}
+#stream {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+#chat-wrapper {
+  flex: 1;
+  position: relative;
+  transition: flex 0.3s ease;
+}
+#chat-wrapper.collapsed {
+  flex: 0;
+}
+#chat {
+  width: 100%;
+  height: 100%;
+  border: none;
+}

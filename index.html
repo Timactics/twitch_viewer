@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Twitch Galerie for VIDAA</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Streamer hinzufügen: nur in der Galerie sichtbar -->
+  <div id="add-container">
+    <input id="add-input" type="text" placeholder="Streamer-Name eingeben"/>
+    <button id="add-button">Hinzufügen</button>
+  </div>
+
+  <!-- Galerie mit Live-Streams -->
+  <div id="gallery">Lade Streams …</div>
+
+  <!-- Viewer: Stream + Chat -->
+  <div id="viewer" class="hidden">
+    <div id="controls">
+      <button id="back" class="btn">← Zurück</button>
+      <button id="toggle-chat" class="btn">💬 Chat</button>
+    </div>
+    <div id="stream-container">
+      <div id="stream-wrapper">
+        <iframe id="stream" allowfullscreen frameborder="0"></iframe>
+      </div>
+      <div id="chat-wrapper">
+        <iframe id="chat" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="config.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
